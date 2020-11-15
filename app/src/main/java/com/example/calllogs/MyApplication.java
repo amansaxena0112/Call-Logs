@@ -37,15 +37,6 @@ public class MyApplication extends MultiDexApplication {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
     }
 
-//    private NetworkChangeReceiver networkChangeReceiver;
-//
-//    private NetworkChangeReceiver getConnectivityReceiver() {
-//        if (networkChangeReceiver == null)
-//            networkChangeReceiver = new NetworkChangeReceiver();
-//
-//        return networkChangeReceiver;
-//    }
-
     private final Application.ActivityLifecycleCallbacks callback = new Application.ActivityLifecycleCallbacks() {
         @Override
         public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
@@ -98,55 +89,12 @@ public class MyApplication extends MultiDexApplication {
 
     @Override
     public void onCreate() {
-        /**
-         * CleverTap in-app-notification
-         * */
-        //ActivityLifecycleCallback.register(this);
         registerActivityLifecycleCallbacks(callback);
 
         super.onCreate();
         mInstance = this;
 
-       // UploadService.NAMESPACE = BuildConfig.APPLICATION_ID;
         MultiDex.install(this);
-
-        //FirebaseApp.initializeApp(this);
-        //Fabric.with(this, new Crashlytics());
-        //DBHelper.initDB(getApplicationContext());
-
-
-//        final FirebaseRemoteConfig firebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
-//        FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
-//                .setDeveloperModeEnabled(BuildConfig.DEBUG)
-//                .build();
-//        firebaseRemoteConfig.setConfigSettings(configSettings);
-//
-//        // set in-app defaults
-//        Map<String, Object> remoteConfigDefaults = new HashMap();
-//        remoteConfigDefaults.put(Constants.KEY_UPDATE_REQUIRED, false);
-//        remoteConfigDefaults.put(Constants.KEY_CURRENT_VERSION, StaticHelper.getAppVersionCode(this));
-//        //remoteConfigDefaults.put(BlowhornConst.KEY_UPDATE_URL,"https://play.google.com/apps/testing/net.blowhorn.driverapp");
-//
-//        IntentFilter filter = new IntentFilter();
-//        filter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-//        filter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
-//        filter.addCategory(Intent.CATEGORY_DEFAULT);
-//        try {
-//            registerReceiver(getConnectivityReceiver(), filter);
-//        } catch (Exception e) {
-//            // already registered
-//        }
-//        firebaseRemoteConfig.setDefaults(remoteConfigDefaults);
-//        firebaseRemoteConfig.fetch(3600) // fetch every 1 hours
-//                .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        if (task.isSuccessful()) {
-//                            android.util.Log.d(TAG, "remoteConfig is fetched.");
-//                            firebaseRemoteConfig.activateFetched();
-//                        }
-//                    }
-//                });
 
     }
 
