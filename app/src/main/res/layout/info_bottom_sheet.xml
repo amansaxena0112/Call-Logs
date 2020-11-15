@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:lineHeight="14sp"
+                android:text="Please enter all the details"
+                android:textAllCaps="true"
+                android:maxLines="1"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:lineHeight="14sp"
+                android:text="Mobile number*"
+                android:textAllCaps="true"
+                android:maxLines="1"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_bg"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@drawable/cursor_bg"
+                android:maxLength="10"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorGrey"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:lineHeight="14sp"
+            android:text="Calls*"
+            android:textAllCaps="true"
+            android:maxLines="1"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/incoming_calls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Incoming calls"/>
+
+        <CheckBox
+            android:id="@+id/outgoing_calls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Outgoing calls"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorGrey"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:lineHeight="14sp"
+            android:text="Time interval*"
+            android:textAllCaps="true"
+            android:maxLines="1"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/time_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 hr"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:tag="1"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 hrs"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:tag="2"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 hrs"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:tag="3"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4 hrs"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:tag="4"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="13dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardCornerRadius="4dp">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Save"
+                    android:background="@drawable/button_bg"
+                    android:enabled="true"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"/>
+
+            </androidx.cardview.widget.CardView>
+
+<!--            <TextView-->
+<!--                android:id="@+id/dismiss"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:lineHeight="14sp"-->
+<!--                android:text="DISMISS"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:layout_marginEnd="32dp"-->
+<!--                android:textColor="@color/coupon_detail_color"-->
+<!--                android:maxLines="1"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/close_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:lineHeight="14sp"-->
+<!--                android:text="CANCEL RIDE"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/app_color"-->
+<!--                android:maxLines="1"-->
+<!--                android:textStyle="bold"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

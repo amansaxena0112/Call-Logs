@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CallLogs</string>
+
+    <string name="base_url">http://cab.grapxcode.com</string>
+    <string name="unable_to_reach_our_server_chekc_network_connection">Unable to reach our server. Check network connection!</string>
+    <string name="invalid_session_token_try_login_again">Invalid session token, Try login again!</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+</resources>
